@@ -6,18 +6,19 @@ namespace Beregner
     {
         static void Main(string[] args)
         {
-            bool askUser = AskUser();
+            bool clientType = ClientTypeSelect();
 
-            var client = CreateClient(askUser);
+            var client = CreateClient(clientType);
 
             Console.WriteLine($"Name: {client.Name}, Income: {client.Income}, Consumption: {client.Consumption}");
         }
 
         public static Client CreateClient(bool type)
         {
-            if (!type)
+            if (type)
             {
-                Client client = new Client();
+                //var client = CreateUserDefinedClient();
+                Client client = new Client("Dariusz", 3453245, 345345);
                 return client;  
             }
             else
@@ -27,11 +28,14 @@ namespace Beregner
             }
         }
 
-        public static bool AskUser()
+        public static bool ClientTypeSelect()
         {
-            Console.WriteLine("Create default client 0 or 1 for userdefined");
-             bool selection = bool.Parse(Console.ReadLine());
-            return selection;
+            Console.WriteLine("To create new user type press 'Y' or press 'N' or Enter to continue with a default user");
+            Console.Write("Create new user?: ");
+            string selection = Console.ReadLine();
+            if (selection.ToLower() == "y")
+                return true;
+                return false;
         }
     }
 }
