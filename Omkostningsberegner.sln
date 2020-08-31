@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beregner", "Beregner\Beregner.csproj", "{3E92EFB8-D886-4AF9-B742-EDE44C05A638}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeregnerTester", "BeregnerTester\BeregnerTester.csproj", "{4CE3BEEF-41F9-41CA-9621-2EDD502626B8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E92EFB8-D886-4AF9-B742-EDE44C05A638}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E92EFB8-D886-4AF9-B742-EDE44C05A638}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E92EFB8-D886-4AF9-B742-EDE44C05A638}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E92EFB8-D886-4AF9-B742-EDE44C05A638}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CE3BEEF-41F9-41CA-9621-2EDD502626B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CE3BEEF-41F9-41CA-9621-2EDD502626B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CE3BEEF-41F9-41CA-9621-2EDD502626B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CE3BEEF-41F9-41CA-9621-2EDD502626B8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {727C0697-C12F-4272-B8EE-6CDCE8FA3148}
+	EndGlobalSection
+EndGlobal
