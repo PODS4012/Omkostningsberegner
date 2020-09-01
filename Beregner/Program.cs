@@ -29,8 +29,9 @@ namespace Beregner
         public static Client CreateUserDefinedClient()
         {
             string name = UserDefinedClientName();
-            double income = UserDefinedClientIncome();
-            Client client = new Client(name, income, 345345);
+            double income = UserDefinedClientIncomeConsumption("Income");
+            double consumption = UserDefinedClientIncomeConsumption("Consumption");
+            Client client = new Client(name, income, consumption);
             return client;
         }
 
@@ -38,8 +39,8 @@ namespace Beregner
         {
             Console.WriteLine("To create new user type press 'Y' or press 'N' or Enter to continue with a default user");
             Console.Write("Create new user?: ");
-            string selection = Console.ReadLine();
-            if (selection.ToLower() == "y")
+            string input = Console.ReadLine();
+            if (input.ToLower() == "y")
                 return true;
             return false;
         }
@@ -47,26 +48,26 @@ namespace Beregner
         private static string UserDefinedClientName()
         {
             Console.Write("Insert new username: ");
-            string selection = Console.ReadLine();
+            string input = Console.ReadLine();
 
-            while (selection.Length < 3)
+            while (input.Length < 3)
             {
                 Console.Write("Username should contain min.3 characters. Try again: ");
-                selection = Console.ReadLine();
+                input = Console.ReadLine();
             }
-            return selection;
+            return input;
         }
-        private static double UserDefinedClientIncome()
+        private static double UserDefinedClientIncomeConsumption(string type)
         {
-            Console.Write("Insert Income: ");
-            string selection = Console.ReadLine();
-            double income;
-            while (!double.TryParse(selection, out income)) 
+            Console.Write($"Insert {type}: ");
+            string input = Console.ReadLine();
+            double amount;
+            while (!double.TryParse(input, out amount) || amount == 0) 
             {
-                Console.Write("Insert Income as decimal: ");
-                selection = Console.ReadLine();
+                Console.Write($"Insert {type} as decimal and above 0: ");
+                input = Console.ReadLine();
             }
-            return income;
+            return amount;
         }
     }
 }
