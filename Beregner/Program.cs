@@ -17,15 +17,20 @@ namespace Beregner
         {
             if (type)
             {
-                //var client = CreateUserDefinedClient();
-                Client client = new Client("Dariusz", 3453245, 345345);
-                return client;  
+                var client = CreateUserDefinedClient();
+                return client;
             }
             else
             {
                 Client client = new Client();
                 return client;
             }
+        }
+        public static Client CreateUserDefinedClient()
+        {
+            string name = UserDefinedClientName();
+            Client client = new Client(name, 3453245, 345345);
+            return client;
         }
 
         public static bool ClientTypeSelect()
@@ -35,7 +40,32 @@ namespace Beregner
             string selection = Console.ReadLine();
             if (selection.ToLower() == "y")
                 return true;
-                return false;
+            return false;
+        }
+
+        private static string UserDefinedClientName()
+        {
+            Console.Write("Insert new username: ");
+            string selection = Console.ReadLine();
+
+            while (selection.Length < 3)
+            {
+                Console.Write("Username should contain min.3 characters. Try again: ");
+                selection = Console.ReadLine();
+            }
+            return selection;
+        }
+        private static double UserDefinedClientIncome()
+        {
+            Console.Write("Insert Income: ");
+            string selection = Console.ReadLine();
+            double income;
+            while (!double.TryParse(selection, out income)) 
+            {
+                Console.Write("Username should contain min.3 characters. Try again: ");
+                selection = Console.ReadLine();
+            }
+            return income;
         }
     }
 }
