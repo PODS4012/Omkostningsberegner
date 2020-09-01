@@ -2,7 +2,7 @@
 
 namespace Beregner
 {
-    class Program
+    public static class Program
     {
         static void Main(string[] args)
         {
@@ -45,24 +45,24 @@ namespace Beregner
             return false;
         }
 
-        private static string UserDefinedClientName()
+        public static string UserDefinedClientName()
         {
             Console.Write("Insert new username: ");
             string input = Console.ReadLine();
 
-            while (input.Length < 3)
+            while (input.Trim().Length < 3)
             {
                 Console.Write("Username should contain min.3 characters. Try again: ");
                 input = Console.ReadLine();
             }
             return input;
         }
-        private static double UserDefinedClientIncomeConsumption(string type)
+        public static double UserDefinedClientIncomeConsumption(string type)
         {
             Console.Write($"Insert {type}: ");
             string input = Console.ReadLine();
             double amount;
-            while (!double.TryParse(input, out amount) || amount == 0) 
+            while (!double.TryParse(input, out amount) || amount <= 0) 
             {
                 Console.Write($"Insert {type} as decimal and above 0: ");
                 input = Console.ReadLine();

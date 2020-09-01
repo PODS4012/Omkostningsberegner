@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beregner", "Beregner\Beregner.csproj", "{3E92EFB8-D886-4AF9-B742-EDE44C05A638}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Beregner", "Beregner\Beregner.csproj", "{3E92EFB8-D886-4AF9-B742-EDE44C05A638}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeregnerTester", "BeregnerTester\BeregnerTester.csproj", "{4CE3BEEF-41F9-41CA-9621-2EDD502626B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTest", "UnitTest\UnitTest.csproj", "{70CCCE25-3E02-459A-83C0-2CE5F461F4A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{3E92EFB8-D886-4AF9-B742-EDE44C05A638}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E92EFB8-D886-4AF9-B742-EDE44C05A638}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E92EFB8-D886-4AF9-B742-EDE44C05A638}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4CE3BEEF-41F9-41CA-9621-2EDD502626B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4CE3BEEF-41F9-41CA-9621-2EDD502626B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4CE3BEEF-41F9-41CA-9621-2EDD502626B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4CE3BEEF-41F9-41CA-9621-2EDD502626B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70CCCE25-3E02-459A-83C0-2CE5F461F4A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70CCCE25-3E02-459A-83C0-2CE5F461F4A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70CCCE25-3E02-459A-83C0-2CE5F461F4A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70CCCE25-3E02-459A-83C0-2CE5F461F4A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
