@@ -55,5 +55,17 @@ namespace Beregner
             }
             return selection;
         }
+        private static double UserDefinedClientIncome()
+        {
+            Console.Write("Insert Income: ");
+            string selection = Console.ReadLine();
+            double income;
+            while (!double.TryParse(selection, out income)) 
+            {
+                Console.Write("Username should contain min.3 characters. Try again: ");
+                selection = Console.ReadLine();
+            }
+            return income;
+        }
     }
 }
