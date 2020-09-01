@@ -29,7 +29,8 @@ namespace Beregner
         public static Client CreateUserDefinedClient()
         {
             string name = UserDefinedClientName();
-            Client client = new Client(name, 3453245, 345345);
+            double income = UserDefinedClientIncome();
+            Client client = new Client(name, income, 345345);
             return client;
         }
 
@@ -62,7 +63,7 @@ namespace Beregner
             double income;
             while (!double.TryParse(selection, out income)) 
             {
-                Console.Write("Username should contain min.3 characters. Try again: ");
+                Console.Write("Insert Income as decimal: ");
                 selection = Console.ReadLine();
             }
             return income;
