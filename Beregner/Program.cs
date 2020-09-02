@@ -2,10 +2,14 @@
 
 namespace Beregner
 {
-    public static class Program
+    class Program
     {
         static void Main(string[] args)
         {
+            
+            Console.WriteLine(Date.Today.ToString("d"));
+            Console.WriteLine(Date.FistDay.ToString("d"));
+            Console.WriteLine(Date.CalculateDaysFormBeginningOfTheYear());
             bool clientType = ClientTypeSelect();
 
             var client = CreateClient(clientType);
