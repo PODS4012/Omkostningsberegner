@@ -2,10 +2,12 @@
 
 namespace Beregner
 {
-    public static class Program
+    class Program
     {
         static void Main(string[] args)
         {
+            
+            Console.WriteLine(Date.Today.ToString("d"));
             bool clientType = ClientTypeSelect();
 
             var client = CreateClient(clientType);
