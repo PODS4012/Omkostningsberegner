@@ -6,7 +6,7 @@ namespace Beregner
 {
     public class Client
     {
-        public string Name { get; set; } = "Birges";
+        public string Name { get; set; } = "Birge";
         public double Income { get; set; } = 246585;
         public double Consumption { get; set; } = 100704.1;
         
