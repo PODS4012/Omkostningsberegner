@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace Beregner
 {
@@ -6,15 +7,9 @@ namespace Beregner
     {
         static void Main(string[] args)
         {
-            
-            Console.WriteLine(Date.Today.ToString("d"));
-            Console.WriteLine(Date.FistDay.ToString("d"));
-            Console.WriteLine(Date.CalculateDaysFormBeginningOfTheYear());
             bool clientType = ClientTypeSelect();
-
             var client = CreateClient(clientType);
-
-            Console.WriteLine($"Name: {client.Name}, Income: {client.Income}, Consumption: {client.Consumption}");
+            Console.WriteLine(PrintResuts(client));
         }
 
         public static Client CreateClient(bool type)
@@ -72,6 +67,23 @@ namespace Beregner
                 input = Console.ReadLine();
             }
             return amount;
+        }
+        public static string PrintResuts(Client client)
+        {
+            var sb = new StringBuilder();
+            sb.AppendLine("");
+            sb.AppendLine($"Client Name: {client.Name}, Total Income: {client.Income.ToString("C2")}, Total Consumption: {client.Consumption.ToString("C2")}");
+            sb.AppendLine("");
+            sb.AppendLine($"Total days from beginning of the year: {Date.CalculateDaysFormBeginningOfTheYear()}");
+            sb.AppendLine("");
+            sb.AppendLine($"Total months from beginning of the year: {Date.CalculateMonthsFormBeginningOfTheYear().ToString("F2")}");
+            sb.AppendLine("");
+            sb.AppendLine($"Average Income: {Calculator.AverageIncome(client.Income, Date.CalculateMonthsFormBeginningOfTheYear()).ToString("C2")}");
+            sb.AppendLine("");
+            sb.AppendLine($"Average Consumption: {Calculator.AverageConsumption(client.Consumption, Date.CalculateMonthsFormBeginningOfTheYear()).ToString("C2")}");
+            sb.AppendLine("");
+            sb.AppendLine($"Savings Rate: {Calculator.SavingsRate(client.Income, client.Consumption).ToString("P")}");
+            return sb.ToString();
         }
     }
 }
